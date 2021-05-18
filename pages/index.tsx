@@ -4,9 +4,17 @@ import CountryCard from '../components/CountryCard';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
 import RegionList from '../components/RegionList';
+import Pagination from "../components/pagination"
+
 
 export default function Home({ allCountries }) {
   const [searchFilter, setSearchFilter] = useState('');
+  const [postPerpage, setPostPerPage] = useState(15);
+  const [currentPage, setCurrenPage] = useState(1);
+
+  const indexOfLasPost = currentPage * postPerpage;
+  const indexOfFirstPost = indexOfLasPost - postPerpage;
+
 
   const handleSearchFilter = (e) => {
     e.preventDefault();
@@ -21,6 +29,9 @@ export default function Home({ allCountries }) {
       country.region.toLowerCase().includes(searchFilter)
   );
 
+  const currenPost = searchedCountries.slice(indexOfFirstPost, indexOfLasPost);
+  const paginate = (pageNumber) => setCurrenPage(pageNumber);
+
   return (
     <>
       <Header handleSearchFilter={handleSearchFilter} />
@@ -34,7 +45,7 @@ export default function Home({ allCountries }) {
         </h3>
         {searchedCountries.length ? (
           <ul className='grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-            {searchedCountries.map(country => (
+            {currenPost.map(country => (
               <CountryCard
                 key={country.name}
                 flag={country.flag}
@@ -53,6 +64,7 @@ export default function Home({ allCountries }) {
             </h2>
           </div>
         )}
+        <Pagination postPerpage={postPerpage} totalPage={searchedCountries.length} paginate={paginate} />
       </Layout>
     </>
   );
