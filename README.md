@@ -22,8 +22,8 @@ Open http://localhost:3000 with your browser to see the result.
 - Tailwind: https://tailwindcss.com/docs
 - Next.js Documentation: https://nextjs.org/docs/
 - API: 
- - Weather: https://api.openweathermap.org/
- - Country: https://restcountries.eu/
+  - Weather: https://api.openweathermap.org/
+  - Country: https://restcountries.eu/
 # Deploy on Netlify
 
 Link: <a href="https://world-fk-app.netlify.app/" target="_blank">World App</a>
