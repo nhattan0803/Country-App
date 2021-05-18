@@ -18,10 +18,10 @@ Open http://localhost:3000 with your browser to see the result.
 
 # Learn More
 
-Framer motion: https://www.framer.com/motion/
-Tailwind: https://tailwindcss.com/docs
-Next.js Documentation: https://nextjs.org/docs/
-API: 
+- Framer motion: https://www.framer.com/motion/
+- Tailwind: https://tailwindcss.com/docs
+- Next.js Documentation: https://nextjs.org/docs/
+- API: 
  - Weather: https://api.openweathermap.org/
  - Country: https://restcountries.eu/
 # Deploy on Netlify
