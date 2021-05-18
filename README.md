@@ -24,4 +24,4 @@ Next.js Documentation: https://nextjs.org/docs/
 
 # Deploy on Netlify
 
-Link: https://world-fk-app.netlify.app/
+Link: <a href="https://world-fk-app.netlify.app/" target="_blank">https://world-fk-app.netlify.app/</a>
